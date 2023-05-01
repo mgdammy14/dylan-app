@@ -41,18 +41,21 @@ function App() {
       name: "Abraham De la Cruz",
       documentNumber: "77584131",
       status: "Participando",
+      rifas: 2,
     },
     {
       id: 2,
       name: "Gonzalo Pingo",
       documentNumber: "77291842",
       status: "Participando",
+      rifas: 3,
     },
     {
       id: 3,
       name: "Ale Pichincha",
       documentNumber: "70745212",
       status: "Participando",
+      rifas: 1,
     },
   ]);
 
@@ -62,7 +65,10 @@ function App() {
     );
     Swal.fire(
       "Felicidades",
-      filteredData[0].name + " estas participando del sorteo.",
+      filteredData[0].name +
+        " estas participando del sorteo. Con " +
+        filteredData[0].rifas +
+        " rifa(s).",
       "success"
     );
 
@@ -81,7 +87,12 @@ function App() {
             />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={8} sx={{ paddingTop: "100px" }}>
+        <Grid
+          item
+          xs={12}
+          sm={8}
+          sx={{ paddingTop: "100px", paddingBottom: "100px" }}
+        >
           <Paper sx={{ height: "100%", overflow: "auto" }}>
             <div className={classes.inputContainer}>
               <TextField
@@ -106,6 +117,7 @@ function App() {
                     <TableCell>Nombre completo</TableCell>
                     <TableCell>Numero de documento</TableCell>
                     <TableCell>Estado</TableCell>
+                    <TableCell>Cantidad de rifas</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -117,6 +129,7 @@ function App() {
                       <TableCell>{row.name}</TableCell>
                       <TableCell>{row.documentNumber}</TableCell>
                       <TableCell>{row.status}</TableCell>
+                      <TableCell>{row.rifas}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
