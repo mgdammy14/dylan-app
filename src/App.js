@@ -10,6 +10,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Swal from "sweetalert2";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: "100%",
     height: "100%",
-    objectFit: "cover",
   },
   table: {
     minWidth: 650,
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    paddingTop: "15px",
   },
 }));
 
@@ -38,26 +39,34 @@ function App() {
     {
       id: 1,
       name: "Abraham De la Cruz",
-      documentNumber: "77584123",
+      documentNumber: "77584131",
       status: "Participando",
     },
     {
-      id: 1,
+      id: 2,
       name: "Gonzalo Pingo",
       documentNumber: "77291842",
       status: "Participando",
     },
     {
-      id: 1,
+      id: 3,
       name: "Ale Pichincha",
-      documentNumber: "70745215",
+      documentNumber: "70745212",
       status: "Participando",
     },
   ]);
 
   const handleSearch = () => {
-    setData();
-    console.log(searchTerm);
+    const filteredData = data.filter((row) =>
+      row.documentNumber.includes(searchTerm)
+    );
+    Swal.fire(
+      "Felicidades",
+      filteredData[0].name + " estas participando del sorteo.",
+      "success"
+    );
+
+    setData(filteredData);
   };
 
   return (
@@ -76,13 +85,17 @@ function App() {
           <Paper sx={{ height: "100%", overflow: "auto" }}>
             <div className={classes.inputContainer}>
               <TextField
-                label="Search"
+                label="Escribe tu DNI"
                 variant="outlined"
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
               />
-              <Button variant="contained" onClick={handleSearch}>
-                Search
+              <Button
+                variant="contained"
+                onClick={handleSearch}
+                sx={{ marginLeft: "25px" }}
+              >
+                Buscar
               </Button>
             </div>
             <TableContainer>
