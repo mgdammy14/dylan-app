@@ -12,6 +12,8 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Swal from "sweetalert2";
 import axios from "axios";
+import dataCompleta from "./Data";
+import { colors } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,183 +38,29 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const [searchTerm, setSearchTerm] = React.useState("");
-  const [data, setData] = React.useState([
-    {
-      id: 1,
-      nombresCompletos: "Anyu Francesca Alejandria Solari",
-      rifas: 1,
-    },
-    {
-      id: 2,
-      nombresCompletos: "Daniel Alberto Cardenas Pérez",
-      rifas: 1,
-    },
-    {
-      id: 3,
-      nombresCompletos: "Candy Loriet Zegarra Castillo",
-      rifas: 1,
-    },
-    {
-      id: 4,
-      nombresCompletos: "George Antony García Congona",
-      rifas: 1,
-    },
-    {
-      id: 5,
-      nombresCompletos: "Adrian Nicolás Meléndez",
-      rifas: 1,
-    },
-    {
-      id: 6,
-      nombresCompletos: "Nilda Beatríz Herrera Peña",
-      rifas: 1,
-    },
-    {
-      id: 7,
-      nombresCompletos: "Martina Chinchay Ticliahuanca",
-      rifas: 1,
-    },
-    {
-      id: 8,
-      nombresCompletos: "Itamar Solano Huertas",
-      rifas: 1,
-    },
-    {
-      id: 9,
-      nombresCompletos: "Naomí Vasquez Aquino",
-      rifas: 1,
-    },
-    {
-      id: 10,
-      nombresCompletos: "Juan Francisco Taipe Rojas",
-      rifas: 1,
-    },
-    {
-      id: 11,
-      nombresCompletos: "Ercida Rosa Roncal Segura",
-      rifas: 2,
-    },
-    {
-      id: 12,
-      nombresCompletos: "Edwin Roberto Guerrero Merino",
-      rifas: 5,
-    },
-    {
-      id: 13,
-      nombresCompletos: "Karla Calderón Retamozo",
-      rifas: 1,
-    },
-    {
-      id: 14,
-      nombresCompletos: "Jovita Ysidora Gutiérrez Barreto",
-      rifas: 1,
-    },
-    {
-      id: 15,
-      nombresCompletos: "Bertha Maritza Rojas Moztacero",
-      rifas: 1,
-    },
-    {
-      id: 16,
-      nombresCompletos: "Edmundo Calderón Pérez (César)",
-      rifas: 5,
-    },
-    {
-      id: 17,
-      nombresCompletos: "Héctor Armando Enciso Vera",
-      rifas: 1,
-    },
-    {
-      id: 18,
-      nombresCompletos: "Raffo Gómez Falcón",
-      rifas: 1,
-    },
-    {
-      id: 19,
-      nombresCompletos: "Nancy Garay Torres",
-      rifas: 1,
-    },
-    {
-      id: 20,
-      nombresCompletos: "Jennifer Yahuarcani Ahuanari",
-      rifas: 1,
-    },
-    {
-      id: 21,
-      nombresCompletos: "Mariel Barreros M.",
-      rifas: 1,
-    },
-    {
-      id: 22,
-      nombresCompletos: "Danitza Alejandra",
-      rifas: 1,
-    },
-    {
-      id: 23,
-      nombresCompletos: "Abel Garay Torres",
-      rifas: 1,
-    },
-    {
-      id: 24,
-      nombresCompletos: "Mayra Azucena Matos",
-      rifas: 1,
-    },
-    {
-      id: 25,
-      nombresCompletos: "Adderly Limber Alejos Ivin",
-      rifas: 2,
-    },
-    {
-      id: 26,
-      nombresCompletos: "Rosa Elena Márquez Fajardo",
-      rifas: 1,
-    },
-    {
-      id: 27,
-      nombresCompletos: "Anthony Carlos Vera",
-      rifas: 3,
-    },
-    {
-      id: 28,
-      nombresCompletos: "Maribel Mejia Campos",
-      rifas: 2,
-    },
-    {
-      id: 29,
-      nombresCompletos: "Martha Vásquez Miñano",
-      rifas: 1,
-    },
-    {
-      id: 30,
-      nombresCompletos: "Shadia Abushaibe Thride",
-      rifas: 2,
-    },
-    {
-      id: 31,
-      nombresCompletos: "Irma Ninaquispe Terrones",
-      rifas: 1,
-    },
-    {
-      id: 32,
-      nombresCompletos: "Ruben Darío Romero Meza",
-      rifas: 4,
-    },
-  ]);
+  const [data, setData] = React.useState(dataCompleta);
 
   const handleSearch = () => {
-    const filteredData = data.filter((row) =>
-      row.documentNumber.includes(searchTerm)
-    );
-    Swal.fire(
-      "Felicidades",
-      filteredData[0].name +
-        " estas participando del sorteo. Con " +
-        filteredData[0].rifas +
-        " rifa(s).",
-      "success"
-    );
+    try {
+      const filteredData = data.filter((row) =>
+        row.nombresCompletos.includes(searchTerm)
+      );
+      Swal.fire(
+        "Felicidades",
+        filteredData[0].nombresCompletos +
+          " estas participando del sorteo. Con " +
+          filteredData[0].rifas +
+          " rifa(s).",
+        "success"
+      );
 
-    setData(filteredData);
+      setData(filteredData);
+    } catch {}
+  };
+
+  const handleSearch2 = () => {
+    setData(dataCompleta);
+    setSearchTerm("");
   };
 
   return (
@@ -239,14 +87,35 @@ function App() {
                 label="Escribe tu DNI"
                 variant="outlined"
                 value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
+                onChange={(event) => {
+                  setSearchTerm(event.target.value);
+                }}
               />
               <Button
                 variant="contained"
                 onClick={handleSearch}
-                sx={{ marginLeft: "25px" }}
+                sx={{
+                  marginLeft: "25px",
+                  backgroundColor: "blue", // Cambia el color de fondo a azul
+                  "&:hover": {
+                    backgroundColor: "darkblue", // Cambia el color de fondo al pasar el cursor sobre el botón
+                  },
+                }}
               >
                 Buscar
+              </Button>
+              <Button
+                variant="contained"
+                onClick={handleSearch2}
+                sx={{
+                  marginLeft: "25px",
+                  backgroundColor: "red", // Cambia el color de fondo a rojo
+                  "&:hover": {
+                    backgroundColor: "darkred", // Cambia el color de fondo al pasar el cursor sobre el botón
+                  },
+                }}
+              >
+                Limpiar
               </Button>
             </div>
             <TableContainer>
