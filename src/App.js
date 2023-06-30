@@ -2668,6 +2668,30 @@ function App() {
                         nombresCompletos: "Jose Walter Chapoñan",
                         rifas: 1
                         }
+                        ,
+                        {
+                        id: 545,
+                        nombresCompletos: "Tamara Moore Ramos",
+                        rifas: 1
+                        }
+                        ,
+                        {
+                        id: 546,
+                        nombresCompletos: "Adriano Mendoza",
+                        rifas: 1
+                        }
+                        ,
+                        {
+                        id: 547,
+                        nombresCompletos: "Lionel Tapia",
+                        rifas: 1
+                        }
+                        ,
+                        {
+                        id: 548,
+                        nombresCompletos: "Aura",
+                        rifas: 1
+                        }
                 
     ]);
 
@@ -5318,7 +5342,32 @@ function App() {
                         id: 544,
                         nombresCompletos: "Jose Walter Chapoñan",
                         rifas: 1
-                        }]);
+                        }
+                        ,
+                        {
+                        id: 545,
+                        nombresCompletos: "Tamara Moore Ramos",
+                        rifas: 1
+                        }
+                        ,
+                        {
+                        id: 546,
+                        nombresCompletos: "Adriano Mendoza",
+                        rifas: 1
+                        }
+                        ,
+                        {
+                        id: 547,
+                        nombresCompletos: "Lionel Tapia",
+                        rifas: 1
+                        }
+                        ,
+                        {
+                        id: 548,
+                        nombresCompletos: "Aura",
+                        rifas: 1
+                        }
+                      ]);
     setSearchTerm("");
   };
 
