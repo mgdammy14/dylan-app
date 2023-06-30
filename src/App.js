@@ -2690,7 +2690,7 @@ function App() {
   };
 
   const handleSearch2 = () => {
-    setData({
+    setData([{
       id: 1,
       nombresCompletos: "Daniel Alberto Cardenas Perez",
       rifas: 1,
@@ -5318,7 +5318,7 @@ function App() {
                         id: 544,
                         nombresCompletos: "Jose Walter Chapoñan",
                         rifas: 1
-                        });
+                        }]);
     setSearchTerm("");
   };
 
