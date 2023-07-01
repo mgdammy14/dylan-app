@@ -1851,6 +1851,56 @@ function App() {
       nombresCompletos: "Luciana Trujillo Perez",
       rifas: 1,
     },
+    {
+      id: 571,
+      nombressCompletos: "Jhonny Demetrio Romero Meza ",
+      rifas: 1,
+    },
+    {
+      id: 572,
+      nombresCompletos: "Jhonny Demetrio Romero Meza",
+      rifas: 1,
+    },
+    {
+      id: 573,
+      nombresCompletos: "Leydi Daniela Cerin Yupanqui",
+      rifas: 1,
+    },
+    {
+      id: 574,
+      nombresCompletos: "Maria Isabel Caldas Anco",
+      rifas: 1,
+    },
+    {
+      id: 575,
+      nombresCompletos: "Jose Gonzales",
+      rifas: 1,
+    },
+    {
+      id: 576,
+      nombresCompletos: "Yanina Diaz Gonzales",
+      rifas: 1,
+    },
+    {
+      id: 577,
+      nombresCompletos: "Sara  Abanto Garcia",
+      rifas: 1,
+    },
+    {
+      id: 578,
+      nombresCompletos: "Maria Alvares Rangel",
+      rifas: 1,
+    },
+    {
+      id: 579,
+      nombresCompletos: "Sarita Rodriguez Altamirano",
+      rifas: 1,
+    },
+    {
+      id: 580,
+      nombresCompletos: "Paul Rodriguez Centurion",
+      rifas: 1,
+    },
   ]);
   const handleSearch = () => {
     try {
@@ -3714,6 +3764,56 @@ function App() {
       {
         id: 570,
         nombresCompletos: "Luciana Trujillo Perez",
+        rifas: 1,
+      },
+      {
+        id: 571,
+        nombressCompletos: "Jhonny Demetrio Romero Meza ",
+        rifas: 1,
+      },
+      {
+        id: 572,
+        nombresCompletos: "Jhonny Demetrio Romero Meza",
+        rifas: 1,
+      },
+      {
+        id: 573,
+        nombresCompletos: "Leydi Daniela Cerin Yupanqui",
+        rifas: 1,
+      },
+      {
+        id: 574,
+        nombresCompletos: "Maria Isabel Caldas Anco",
+        rifas: 1,
+      },
+      {
+        id: 575,
+        nombresCompletos: "Jose Gonzales",
+        rifas: 1,
+      },
+      {
+        id: 576,
+        nombresCompletos: "Yanina Diaz Gonzales",
+        rifas: 1,
+      },
+      {
+        id: 577,
+        nombresCompletos: "Sara  Abanto Garcia",
+        rifas: 1,
+      },
+      {
+        id: 578,
+        nombresCompletos: "Maria Alvares Rangel",
+        rifas: 1,
+      },
+      {
+        id: 579,
+        nombresCompletos: "Sarita Rodriguez Altamirano",
+        rifas: 1,
+      },
+      {
+        id: 580,
+        nombresCompletos: "Paul Rodriguez Centurion",
         rifas: 1,
       },
     ]);
