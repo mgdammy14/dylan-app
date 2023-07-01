@@ -1443,7 +1443,7 @@ function App() {
     },
     {
       id: 489,
-      nombresCompletos: "Eduar Soiesura",
+      nombresCompletos: "Eduar Diestra",
       rifas: 1,
     },
     {
@@ -1453,7 +1453,7 @@ function App() {
     },
     {
       id: 491,
-      nombresCompletos: "Lito Pinehi Chota",
+      nombresCompletos: "Lito Pinchi Chota",
       rifas: 1,
     },
     {
@@ -3358,7 +3358,7 @@ function App() {
       },
       {
         id: 489,
-        nombresCompletos: "Eduar Soiesura",
+        nombresCompletos: "Eduar Diestra",
         rifas: 1,
       },
       {
@@ -3368,7 +3368,7 @@ function App() {
       },
       {
         id: 491,
-        nombresCompletos: "Lito Pinehi Chota",
+        nombresCompletos: "Lito Pinchi Chota",
         rifas: 1,
       },
       {
