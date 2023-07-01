@@ -1473,7 +1473,7 @@ function App() {
     },
     {
       id: 495,
-      nombresCompletos: "Eliz TanTalean",
+      nombresCompletos: "Elis Tantalean",
       rifas: 1,
     },
     {
@@ -3388,7 +3388,7 @@ function App() {
       },
       {
         id: 495,
-        nombresCompletos: "Eliz TanTalean",
+        nombresCompletos: "Elis Tantalean",
         rifas: 1,
       },
       {
